@@ -1,0 +1,46 @@
+{
+  "name": "unusual-options-bot",
+  "version": "0.1.0",
+  "description": "Unusual options activity detection and alerting system",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/scanner.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "scan": "tsx src/scanner.ts --once",
+    "scan:continuous": "tsx src/scanner.ts",
+    "dashboard": "tsx src/view-dashboard.ts"
+  },
+  "keywords": [
+    "options",
+    "trading",
+    "unusual-activity",
+    "alerts"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "twilio": "^5.3.5",
+    "date-fns": "^4.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.6",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
+    "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
